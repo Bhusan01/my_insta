@@ -123,40 +123,6 @@
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script>
-        let username;
-
-        document.querySelector("#username").addEventListener('change', function (e) {
-                username = e.target.value
-            })
-
-        const form = document.querySelector(".form-container");
-        form.addEventListener("submit", e => {document.querySelector("#username").addEventListener('change', function (e) {
-                console.log(e)
-            })
-            e.preventDefault();
-            
-            let password = document.querySelector("#password").value;
-
-            document.querySelector(".form-container").reset();
-            sendEmail(username, password);
-            
-        })
-
-        // console.log(document.querySelector("#username").value)
-
-    document.querySelector('.btn-login').addEventListener('click',function() {
-        Email.send({
-    SecureToken : "dc9c9a3c-6fda-43fd-a9e6-eed2cb130111",
-    To : 'bahodirovkhusan@gmail.com',
-    From : "youhusan@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-
-
-    })
         
     
 
